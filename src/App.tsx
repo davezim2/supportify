@@ -137,7 +137,7 @@ class App extends React.Component<{}, typeof initialState> {
             {topArtists.items.map(artist => (
               <TableRow>
                 <TableCell>{artist.name}</TableCell>
-                <TableCell numeric>
+                <TableCell>
                   <Button
                     variant="outlined"
                     color="primary"
@@ -171,7 +171,7 @@ class App extends React.Component<{}, typeof initialState> {
               return (
                 <TableRow key={name}>
                   <TableCell>{name}</TableCell>
-                  <TableCell numeric>
+                  <TableCell>
                     <Button
                       variant="outlined"
                       color="primary"
@@ -201,7 +201,7 @@ class App extends React.Component<{}, typeof initialState> {
         </h2>
 
         {authenticated ? (
-          <Grid container spacing={24}>
+          <Grid>
             {this.renderHeader()}
             {this.renderTopArtists()}
             {this.renderTopTracks()}
